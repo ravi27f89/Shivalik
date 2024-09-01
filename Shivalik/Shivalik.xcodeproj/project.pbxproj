@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32ECC5A12C85DE130042163D /* PropertyListViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A02C85DE130042163D /* PropertyListViewController+Search.swift */; };
+		32ECC5A32C85DE5D0042163D /* PropertyListViewController+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A22C85DE5D0042163D /* PropertyListViewController+Collection.swift */; };
+		32ECC5A52C85DEA70042163D /* PropertyListViewController+Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A42C85DEA70042163D /* PropertyListViewController+Tableview.swift */; };
 		5480E4102C8410CD00D1459E /* BannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E40F2C8410CD00D1459E /* BannerViewCell.swift */; };
 		5480E4122C84161200D1459E /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480E4112C84161200D1459E /* BannerViewCell.xib */; };
 		5480E4142C84253600D1459E /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 5480E4132C84253600D1459E /* Categories.json */; };
 		5480E4162C84329600D1459E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E4152C84329600D1459E /* Category.swift */; };
-		5480E4182C8432C500D1459E /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E4172C8432C500D1459E /* CategoryViewModel.swift */; };
-		5480E41A2C8432D700D1459E /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E4192C8432D700D1459E /* PropertyViewModel.swift */; };
 		54A6DC9C2C83899500009693 /* PropertyInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A6DC992C83899500009693 /* PropertyInfoCell.swift */; };
 		54A6DC9E2C838C2500009693 /* PropertyInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A6DC9D2C838C2500009693 /* PropertyInfoCell.xib */; };
 		54D5C4772C836771001B9F87 /* Properties.json in Resources */ = {isa = PBXBuildFile; fileRef = 54D5C4632C836771001B9F87 /* Properties.json */; };
@@ -26,12 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32ECC5A02C85DE130042163D /* PropertyListViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Search.swift"; sourceTree = "<group>"; };
+		32ECC5A22C85DE5D0042163D /* PropertyListViewController+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Collection.swift"; sourceTree = "<group>"; };
+		32ECC5A42C85DEA70042163D /* PropertyListViewController+Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Tableview.swift"; sourceTree = "<group>"; };
 		5480E40F2C8410CD00D1459E /* BannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewCell.swift; sourceTree = "<group>"; };
 		5480E4112C84161200D1459E /* BannerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
 		5480E4132C84253600D1459E /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
 		5480E4152C84329600D1459E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		5480E4172C8432C500D1459E /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
-		5480E4192C8432D700D1459E /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
 		54A6DC992C83899500009693 /* PropertyInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyInfoCell.swift; sourceTree = "<group>"; };
 		54A6DC9D2C838C2500009693 /* PropertyInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyInfoCell.xib; sourceTree = "<group>"; };
 		54D5C44A2C836740001B9F87 /* Shivalik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shivalik.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,9 @@
 			children = (
 				54A6DC982C83896B00009693 /* Cells */,
 				54D5C4712C836771001B9F87 /* PropertyListViewController.swift */,
+				32ECC5A42C85DEA70042163D /* PropertyListViewController+Tableview.swift */,
+				32ECC5A02C85DE130042163D /* PropertyListViewController+Search.swift */,
+				32ECC5A22C85DE5D0042163D /* PropertyListViewController+Collection.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,8 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				54D5C4732C836771001B9F87 /* PropertyListViewModel.swift */,
-				5480E4192C8432D700D1459E /* PropertyViewModel.swift */,
-				5480E4172C8432C500D1459E /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -253,14 +256,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				54D5C47D2C836771001B9F87 /* PropertyListViewController.swift in Sources */,
-				5480E41A2C8432D700D1459E /* PropertyViewModel.swift in Sources */,
+				32ECC5A52C85DEA70042163D /* PropertyListViewController+Tableview.swift in Sources */,
 				54D5C47C2C836771001B9F87 /* Property.swift in Sources */,
 				5480E4102C8410CD00D1459E /* BannerViewCell.swift in Sources */,
+				32ECC5A12C85DE130042163D /* PropertyListViewController+Search.swift in Sources */,
 				54D5C4792C836771001B9F87 /* AppDelegate.swift in Sources */,
-				5480E4182C8432C500D1459E /* CategoryViewModel.swift in Sources */,
 				54A6DC9C2C83899500009693 /* PropertyInfoCell.swift in Sources */,
 				54D5C47E2C836771001B9F87 /* PropertyListViewModel.swift in Sources */,
 				5480E4162C84329600D1459E /* Category.swift in Sources */,
+				32ECC5A32C85DE5D0042163D /* PropertyListViewController+Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

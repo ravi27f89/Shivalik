@@ -1,19 +1,10 @@
-//
-//  PropertyListViewModel.swift
-//  Shivalik
-//
-//  Created by ravi maru on 31/08/24.
-//
-
 import Foundation
 
 class PropertyListViewModel {
     private var properties: [Property] = []
     private var allProperties: [Property] = []
     private var categories: [Category] = []
-    
-    // MARK: - Gate Category info
-    
+        
     var numberOfCategories: Int {
         return categories.count
     }
@@ -31,8 +22,6 @@ class PropertyListViewModel {
              }
          }
     }
-
-    // MARK: - Get Property info
     
     var numberOfProperties: Int {
         return properties.count
@@ -47,7 +36,6 @@ class PropertyListViewModel {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let localProp = try JSONDecoder().decode([Property].self, from: data)
-                //properties = localProp
                 properties = localProp.filter { $0.type == categories(at: index).title }
                 allProperties = properties
             } catch {
@@ -58,7 +46,7 @@ class PropertyListViewModel {
     
     func search(at str: String) {
         if !str.isEmpty{
-            properties = allProperties.filter{ $0.title.contains(str) || $0.description.contains(str)}
+            properties = allProperties.filter{ $0.title.contains(str.lowercased()) || $0.description.contains(str.lowercased())}
         }else{
             properties = allProperties
         }
@@ -80,12 +68,44 @@ class PropertyListViewModel {
         }
         
         let sortedCharacters = characterCount.sorted { $0.value > $1.value }.prefix(3)
-        //let top3Characters = sortedCharacters.prefix(3)
-                
         for (char, count) in sortedCharacters {
             topOccurance = topOccurance + "\(char.uppercased()): \(count) \n"
         }
 
         return topOccurance
+    }
+}
+
+class PropertyViewModel {
+    private let property: Property
+    
+    var title: String {
+        return property.title
+    }
+    
+    var description: String {
+        return property.description
+    }
+    var image: String {
+        return property.image
+    }
+
+    init(property: Property) {
+        self.property = property
+    }
+}
+
+class CategoryViewModel {
+    private let category: Category
+    
+    var title: String {
+        return category.title
+    }
+    var image: String {
+        return category.image
+    }
+
+    init(category: Category) {
+        self.category = category
     }
 }
