@@ -1,5 +1,6 @@
 # `Shivalik Group!`
 
+![iOS 15.0+](https://img.shields.io/badge/iOS-16.0%2B-yellow.svg) ![Xcode 15.0+](https://img.shields.io/badge/Xcode-15.4%2B-blue.svg) ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-purple)
 
 
 ## `Overview`

@@ -2,7 +2,7 @@
 //  PropertyListViewModel.swift
 //  Shivalik
 //
-//  Created by krenil patel on 31/08/24.
+//  Created by ravi maru on 31/08/24.
 //
 
 import Foundation

@@ -88,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				54D5C4692C836771001B9F87 /* Application */,
-				54D5C4672C836771001B9F87 /* Base.lproj */,
 				54D5C4642C836771001B9F87 /* Helper */,
 				54D5C4662C836771001B9F87 /* Resources */,
 				54D5C4762C836771001B9F87 /* Screens */,
@@ -113,13 +112,6 @@
 				54D5C4652C836771001B9F87 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		54D5C4672C836771001B9F87 /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		54D5C4692C836771001B9F87 /* Application */ = {
