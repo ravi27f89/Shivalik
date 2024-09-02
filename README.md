@@ -20,11 +20,11 @@ MVVM Architecture to organize code in a clean and efficient way, with building u
     - **View**: The user interface (UI) that the user interacts with. In Swift, this is often your SwiftUI views or UIKit components.
     - **ViewModel**: Acts as a bridge between the Model and the View. It takes data from the Model, processes it if needed, and provides it to the View in a way that’s easy to display.
   
-![List]https://i.postimg.cc/w7FPqCnS/11.jpg
+![List](https://github.com/ravi27f89/Shivalik/blob/main/Shivalik/Screens/1.png)
 
-![Menu]https://i.postimg.cc/k24HBjmD/12.jpg
+![Search](https://github.com/ravi27f89/Shivalik/blob/main/Shivalik/Screens/2.png)
 
-![Search]https://i.postimg.cc/9DnnTGmb/13.jpg
+![Menu](https://github.com/ravi27f89/Shivalik/blob/main/Shivalik/Screens/3.png)
 
 ## Author
 
