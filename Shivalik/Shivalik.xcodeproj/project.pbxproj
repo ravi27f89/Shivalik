@@ -7,43 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32C1C4092C931B23002CB6DF /* PropertyMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 32C1C4082C931B23002CB6DF /* PropertyMockData.json */; };
+		32C1C40E2C931B43002CB6DF /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C1C40D2C931B43002CB6DF /* DataLoader.swift */; };
+		32C1C4102C931B7D002CB6DF /* PropertyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C1C40F2C931B7D002CB6DF /* PropertyModel.swift */; };
 		32ECC5A12C85DE130042163D /* PropertyListViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A02C85DE130042163D /* PropertyListViewController+Search.swift */; };
 		32ECC5A32C85DE5D0042163D /* PropertyListViewController+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A22C85DE5D0042163D /* PropertyListViewController+Collection.swift */; };
 		32ECC5A52C85DEA70042163D /* PropertyListViewController+Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC5A42C85DEA70042163D /* PropertyListViewController+Tableview.swift */; };
 		5480E4102C8410CD00D1459E /* BannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E40F2C8410CD00D1459E /* BannerViewCell.swift */; };
 		5480E4122C84161200D1459E /* BannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5480E4112C84161200D1459E /* BannerViewCell.xib */; };
-		5480E4142C84253600D1459E /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 5480E4132C84253600D1459E /* Categories.json */; };
-		5480E4162C84329600D1459E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5480E4152C84329600D1459E /* Category.swift */; };
 		54A6DC9C2C83899500009693 /* PropertyInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A6DC992C83899500009693 /* PropertyInfoCell.swift */; };
 		54A6DC9E2C838C2500009693 /* PropertyInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A6DC9D2C838C2500009693 /* PropertyInfoCell.xib */; };
-		54D5C4772C836771001B9F87 /* Properties.json in Resources */ = {isa = PBXBuildFile; fileRef = 54D5C4632C836771001B9F87 /* Properties.json */; };
 		54D5C4782C836771001B9F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D5C4652C836771001B9F87 /* Assets.xcassets */; };
 		54D5C4792C836771001B9F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5C4682C836771001B9F87 /* AppDelegate.swift */; };
 		54D5C47A2C836771001B9F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5C46B2C836771001B9F87 /* LaunchScreen.storyboard */; };
 		54D5C47B2C836771001B9F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D5C46D2C836771001B9F87 /* Main.storyboard */; };
-		54D5C47C2C836771001B9F87 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5C46F2C836771001B9F87 /* Property.swift */; };
 		54D5C47D2C836771001B9F87 /* PropertyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5C4712C836771001B9F87 /* PropertyListViewController.swift */; };
 		54D5C47E2C836771001B9F87 /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5C4732C836771001B9F87 /* PropertyListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32C1C4082C931B23002CB6DF /* PropertyMockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PropertyMockData.json; sourceTree = "<group>"; };
+		32C1C40D2C931B43002CB6DF /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		32C1C40F2C931B7D002CB6DF /* PropertyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyModel.swift; sourceTree = "<group>"; };
 		32ECC5A02C85DE130042163D /* PropertyListViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Search.swift"; sourceTree = "<group>"; };
 		32ECC5A22C85DE5D0042163D /* PropertyListViewController+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Collection.swift"; sourceTree = "<group>"; };
 		32ECC5A42C85DEA70042163D /* PropertyListViewController+Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyListViewController+Tableview.swift"; sourceTree = "<group>"; };
 		5480E40F2C8410CD00D1459E /* BannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewCell.swift; sourceTree = "<group>"; };
 		5480E4112C84161200D1459E /* BannerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerViewCell.xib; sourceTree = "<group>"; };
-		5480E4132C84253600D1459E /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
-		5480E4152C84329600D1459E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		54A6DC992C83899500009693 /* PropertyInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyInfoCell.swift; sourceTree = "<group>"; };
 		54A6DC9D2C838C2500009693 /* PropertyInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyInfoCell.xib; sourceTree = "<group>"; };
 		54D5C44A2C836740001B9F87 /* Shivalik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shivalik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5C45B2C836741001B9F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54D5C4632C836771001B9F87 /* Properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Properties.json; sourceTree = "<group>"; };
 		54D5C4652C836771001B9F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54D5C4682C836771001B9F87 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54D5C46A2C836771001B9F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54D5C46C2C836771001B9F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		54D5C46F2C836771001B9F87 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		54D5C4712C836771001B9F87 /* PropertyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListViewController.swift; sourceTree = "<group>"; };
 		54D5C4732C836771001B9F87 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32C1C40C2C931B43002CB6DF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				32C1C40D2C931B43002CB6DF /* DataLoader.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		54A6DC982C83896B00009693 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +100,7 @@
 				54D5C4662C836771001B9F87 /* Resources */,
 				54D5C4762C836771001B9F87 /* Screens */,
 				54D5C46E2C836771001B9F87 /* Storyboard */,
+				32C1C40C2C931B43002CB6DF /* Utility */,
 				54D5C45B2C836741001B9F87 /* Info.plist */,
 			);
 			path = Shivalik;
@@ -102,8 +109,7 @@
 		54D5C4642C836771001B9F87 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				5480E4132C84253600D1459E /* Categories.json */,
-				54D5C4632C836771001B9F87 /* Properties.json */,
+				32C1C4082C931B23002CB6DF /* PropertyMockData.json */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -136,8 +142,7 @@
 		54D5C4702C836771001B9F87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				54D5C46F2C836771001B9F87 /* Property.swift */,
-				5480E4152C84329600D1459E /* Category.swift */,
+				32C1C40F2C931B7D002CB6DF /* PropertyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,13 +243,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C1C4092C931B23002CB6DF /* PropertyMockData.json in Resources */,
 				54D5C47A2C836771001B9F87 /* LaunchScreen.storyboard in Resources */,
 				54D5C4782C836771001B9F87 /* Assets.xcassets in Resources */,
 				54A6DC9E2C838C2500009693 /* PropertyInfoCell.xib in Resources */,
-				54D5C4772C836771001B9F87 /* Properties.json in Resources */,
 				5480E4122C84161200D1459E /* BannerViewCell.xib in Resources */,
 				54D5C47B2C836771001B9F87 /* Main.storyboard in Resources */,
-				5480E4142C84253600D1459E /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,15 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C1C4102C931B7D002CB6DF /* PropertyModel.swift in Sources */,
+				32C1C40E2C931B43002CB6DF /* DataLoader.swift in Sources */,
 				54D5C47D2C836771001B9F87 /* PropertyListViewController.swift in Sources */,
 				32ECC5A52C85DEA70042163D /* PropertyListViewController+Tableview.swift in Sources */,
-				54D5C47C2C836771001B9F87 /* Property.swift in Sources */,
 				5480E4102C8410CD00D1459E /* BannerViewCell.swift in Sources */,
 				32ECC5A12C85DE130042163D /* PropertyListViewController+Search.swift in Sources */,
 				54D5C4792C836771001B9F87 /* AppDelegate.swift in Sources */,
 				54A6DC9C2C83899500009693 /* PropertyInfoCell.swift in Sources */,
 				54D5C47E2C836771001B9F87 /* PropertyListViewModel.swift in Sources */,
-				5480E4162C84329600D1459E /* Category.swift in Sources */,
 				32ECC5A32C85DE5D0042163D /* PropertyListViewController+Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

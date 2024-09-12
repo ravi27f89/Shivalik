@@ -1,15 +1,86 @@
 import Foundation
 
+protocol PropertyViewModelDelegate: AnyObject {
+    func didUpdateProperties()
+    func didUpdateFilteredProperties()
+}
+
 class PropertyListViewModel {
-    private var properties: [Property] = []
-    private var allProperties: [Property] = []
-    private var categories: [Category] = []
+    weak var delegate: PropertyViewModelDelegate?
+
+    var response: PropertyModel?
+    var selectedProperty: [Property] = []
+    var filteredProperty: [Property] = []
+
+    var searchText: String = "" {
+        didSet {
+            fetchSearchedItems()
+        }
+    }
+
+    init() {
+        fetchPropertyData()
+    }
+    
+    func fetchProperty(at index: Int) {
+        searchText = ""
+        selectedProperty = self.response?.property.filter { $0.type == self.response?.category[index].title } ?? []
+        delegate?.didUpdateProperties()
+    }
+    
+    func fetchSearchedItems() {
+        if !searchText.isEmpty {
+            filteredProperty = selectedProperty.filter { item in
+                item.title.lowercased().contains(searchText.lowercased()) ||
+                item.description.lowercased().contains(searchText.lowercased())
+            }
+            delegate?.didUpdateFilteredProperties()
+        }
+    }
+    
+    func fetchOccurance() -> String {
+        var topOccurance = ""
+        let combinedString = selectedProperty.map { $0.title }.joined().lowercased()
+        var characterCount: [Character: Int] = [:]
+
+        for char in combinedString {
+            characterCount[char, default: 0] += 1
+        }
         
+        let sortedCharacters = characterCount.sorted { $0.value > $1.value }.prefix(3)
+        for (char, count) in sortedCharacters {
+            topOccurance += "\(char.uppercased()): \(count) \n"
+        }
+        return topOccurance
+    }
+
+    private func fetchPropertyData() {
+        DataLoader().loadData { [weak self] propertyModel in
+            self?.response = propertyModel
+            self?.delegate?.didUpdateProperties()
+        }
+    }
+    
+//    func search(at str: String, index: Int) {
+//        selectedProperty = self.response?.property.filter { $0.type == self.response?.category[index].title } ?? []
+//    }
+    
+    func search(at str: String, index: Int) {
+        selectedProperty = self.response?.property.filter { $0.type == self.response?.category[index].title } ?? []
+        searchText = str  // This will trigger fetchSearchedItems
+        delegate?.didUpdateFilteredProperties()
+    }
+
+    /*
     var numberOfCategories: Int {
         return categories.count
     }
     func categories(at index: Int) -> CategoryViewModel {
         return CategoryViewModel(category: categories[index])
+    }
+    
+    func fetchPropertyData(){
+        
     }
     
     func loadCategories() {
@@ -73,39 +144,5 @@ class PropertyListViewModel {
         }
 
         return topOccurance
-    }
-}
-
-class PropertyViewModel {
-    private let property: Property
-    
-    var title: String {
-        return property.title
-    }
-    
-    var description: String {
-        return property.description
-    }
-    var image: String {
-        return property.image
-    }
-
-    init(property: Property) {
-        self.property = property
-    }
-}
-
-class CategoryViewModel {
-    private let category: Category
-    
-    var title: String {
-        return category.title
-    }
-    var image: String {
-        return category.image
-    }
-
-    init(category: Category) {
-        self.category = category
-    }
+    }*/
 }

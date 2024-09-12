@@ -7,22 +7,35 @@ extension PropertyListViewController: UITableViewDataSource , UITableViewDelegat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.isEmptyArr{
-            lblNoDataFound.isHidden = false
+        if isSearching {
+            if viewModel.filteredProperty.count == 0 {
+                lblNoDataFound.isHidden = false
+            } else {
+                lblNoDataFound.isHidden = true
+            }
+            return viewModel.filteredProperty.count
         } else {
-            lblNoDataFound.isHidden = true
+            if viewModel.selectedProperty.count == 0 {
+                lblNoDataFound.isHidden = false
+            } else {
+                lblNoDataFound.isHidden = true
+            }
+            return viewModel.selectedProperty.count
         }
-        return viewModel.numberOfProperties
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PropertyInfoCell", for: indexPath) as? PropertyInfoCell else {
             return UITableViewCell()
         }
-
-        let userViewModel = viewModel.properties(at: indexPath.row)
-        let image = UIImage(named: userViewModel.image)
-        cell.configure(withImage: image, title: userViewModel.title, subtitle: userViewModel.description)
+        var userViewModel : Property?
+        if isSearching {
+            userViewModel = viewModel.filteredProperty[indexPath.row]
+        } else {
+            userViewModel = viewModel.selectedProperty[indexPath.row]
+        }
+        let image = UIImage(named: userViewModel?.image ?? "")
+        cell.configure(withImage: image, title: userViewModel?.title ?? "", subtitle: userViewModel?.description ?? "")
         return cell
     }
     

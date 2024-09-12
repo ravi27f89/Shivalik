@@ -2,14 +2,13 @@ import UIKit
 
 extension PropertyListViewController: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfCategories
+        return viewModel.response?.category.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerViewCell", for: indexPath) as! BannerViewCell
-
-        let userViewModel = viewModel.categories(at: indexPath.row)
-        let image = UIImage(named: userViewModel.image)
+        let userViewModel = viewModel.response?.category[indexPath.row]
+        let image = UIImage(named: userViewModel?.image ?? "")
         cell.configure(withImage: image)
         cell.backgroundColor = .brown
         return cell
@@ -25,8 +24,9 @@ extension PropertyListViewController: UICollectionViewDataSource,UICollectionVie
 
     @IBAction func pageControlValueChanges(_ sender: UIPageControl) {
         collection.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
-        viewModel.loadProperties(at: pageControl.currentPage)
-        lblHeader.text = viewModel.categories(at: pageControl.currentPage).title
+        viewModel.fetchProperty(at: pageControl.currentPage)
+        lblHeader.text = viewModel.response?.category[pageControl.currentPage].title ?? ""
+        isSearching = false
         self.view.endEditing(true)
         tblProperties.reloadData()
     }
@@ -36,8 +36,9 @@ extension PropertyListViewController: UICollectionViewDataSource,UICollectionVie
        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
        if let visibleIndexPath = collection.indexPathForItem(at: visiblePoint) {
            self.pageControl.currentPage = visibleIndexPath.row
-           viewModel.loadProperties(at: pageControl.currentPage)
-           lblHeader.text = viewModel.categories(at: pageControl.currentPage).title
+           viewModel.fetchProperty(at: pageControl.currentPage)
+           lblHeader.text = viewModel.response?.category[pageControl.currentPage].title ?? ""
+           isSearching = false
            tblProperties.reloadData()
        }
     }

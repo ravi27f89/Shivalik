@@ -8,6 +8,7 @@ class PropertyListViewController: UIViewController {
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var viewBanner: UIView!
     @IBOutlet weak var lblNoDataFound: UILabel!
+    var isSearching = false
     
     var viewModel: PropertyListViewModel!
     private let headerImageView = UIImageView()
@@ -16,12 +17,11 @@ class PropertyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = PropertyListViewModel()
-        viewModel.loadCategories()
-        viewModel.loadProperties(at: pageControl.currentPage)
-
+        viewModel.fetchProperty(at: pageControl.currentPage)
+        //viewModel.delegate = self
         setupUI()
 
-        pageControl.numberOfPages = viewModel.numberOfCategories
+        pageControl.numberOfPages = viewModel.response?.category.count ?? 0
         pageControl.backgroundStyle = .prominent
     }
     
@@ -37,7 +37,7 @@ class PropertyListViewController: UIViewController {
     }
 
     private func setupTableView() {
-        lblHeader.text = viewModel.categories(at: pageControl.currentPage).title
+        lblHeader.text = "Dummy Title"//viewModel.categories(at: pageControl.currentPage).title
         tblProperties.tableHeaderView = viewBanner
         tblProperties.register(UINib(nibName: "PropertyInfoCell", bundle: nil), forCellReuseIdentifier: "PropertyInfoCell")
     }
